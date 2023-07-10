@@ -7,7 +7,7 @@ Reference: [Run a CKB Dev Blockchain](https://docs.nervos.org/docs/basics/guides
 2. Import your account into [ckb-cli](https://github.com/nervosnetwork/ckb-cli).
 
    ```
-   echo 111111b054d5dd04013156dced8ba2ce4d8cc5973e10d905a228ea1abc267e60 >> privkey
+   echo 33b08bb054d5dd04013156dced8ba2ce4d8cc5973e10d905a228ea1abc267e60 >> privkey
    ckb-cli account import --privkey-path privkey
    ```
 
