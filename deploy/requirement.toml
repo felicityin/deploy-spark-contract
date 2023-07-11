@@ -1,7 +1,7 @@
 [[cells]]
-name = "delegate-requirement"
+name = "requirement"
 enable_type_id = true
-location = { file = "bin/delegate-requirement" }
+location = { file = "bin/requirement" }
 
 # Replace with your own lock if you want to unlock deployed cells.
 # For example the secp256k1 lock
