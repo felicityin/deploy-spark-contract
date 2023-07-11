@@ -49,6 +49,9 @@ Other contracts.
 ```
 git clone https://github.com/nervosnetwork/ckb-production-scripts
 
+cd ckb-production-scripts
+make all-via-docker 
+
 cp ckb-production-scripts/build/omni_lock deploy-spark-contract/bin/
 cp ckb-production-scripts/build/xudt_rce deploy-spark-contract/bin/
 cp ckb-production-scripts/build/always_success deploy-spark-contract/bin/
@@ -86,11 +89,11 @@ ckb-cli deploy apply-txs --info-file ./deploy/infos/stake.json --migration-dir .
 Or use bash as follow.
 
 ```
-bash cmd.sh -c stake -f gen
+bash cmd.sh -c stake -f g
 
-bash cmd.sh -c stake -f sign
+bash cmd.sh -c stake -f s
 
-bash cmd.sh -c stake -f apply
+bash cmd.sh -c stake -f a
 ```
 
 # Upgrade Contracts
@@ -108,9 +111,9 @@ ckb-cli deploy apply-txs --info-file ./deploy/infos/stake1.json --migration-dir 
 Or use bash as follow.
 
 ```
-bash cmd.sh -c stake -f gen -v 1
+bash cmd.sh -c stake -f g -v 1
 
-bash cmd.sh -c stake -f sign -v 1
+bash cmd.sh -c stake -f s -v 1
 
-bash cmd.sh -c stake -f apply -v 1
+bash cmd.sh -c stake -f a -v 1
 ```

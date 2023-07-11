@@ -12,7 +12,7 @@ contracts=(
     "delegate" "delegate-smt" "requirement" "withdraw" "reward" "always-success"
 )
 
-funcs=("gen" "sign" "apply")
+funcs=("g" "s" "a")
 
 usage() {
   echo "Usage: bash $0 -c contract -f function [ -v version ]"
@@ -47,9 +47,9 @@ function main() {
     fi
 
     case "${func}" in
-        gen) ckb-cli deploy gen-txs --deployment-config ./deploy/${contract}.toml --migration-dir ./migrations/${contract} --from-address ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/${info}.json --sign-now; ;;
-        sign) ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/${info}.json --add-signatures; ;;
-        apply) ckb-cli deploy apply-txs --info-file ./deploy/infos/${info}.json --migration-dir ./migrations/${contract}; ;;
+        g) ckb-cli deploy gen-txs --deployment-config ./deploy/${contract}.toml --migration-dir ./migrations/${contract} --from-address ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/${info}.json --sign-now; ;;
+        s) ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/${info}.json --add-signatures; ;;
+        a) ckb-cli deploy apply-txs --info-file ./deploy/infos/${info}.json --migration-dir ./migrations/${contract}; ;;
         *) echo "internal error"; exit 1 ;;
     esac
 }

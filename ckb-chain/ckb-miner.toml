@@ -32,12 +32,11 @@ rpc_url = "http://127.0.0.1:8114/"
 block_on_submit = true
 
 # block template polling interval in milliseconds
-poll_interval = 1000
+poll_interval = 500
 
 # enable listen notify mode
 # listen = "127.0.0.1:8888"
 
 [[miner.workers]]
-worker_type = "Dummy"
-delay_type = "Constant"
-value = 5000
+worker_type = "EaglesongSimple"
+threads = 1
