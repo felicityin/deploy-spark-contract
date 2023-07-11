@@ -51,15 +51,29 @@ git clone https://github.com/nervosnetwork/ckb-production-scripts
 
 cp ckb-production-scripts/build/omni_lock deploy-spark-contract/bin/
 cp ckb-production-scripts/build/xudt_rce deploy-spark-contract/bin/
+cp ckb-production-scripts/build/always_success deploy-spark-contract/bin/
 ```
 
 Then copy compiled contracts from `axon-contract/build/release` to `./bin`.
+
+# Switch network
+
+```
+ckb-cli
+config --url http://127.0.0.1:8114
+```
 
 # Deploy Contracts
 
 Reference: [How to use ckb-cli to deploy a contract](https://github.com/nervosnetwork/ckb-cli/wiki/Deploy-contracts#generate-the-update-transaction)
 
 Taking deploying contract `stake` as an example.
+
+```
+cd deploy-spark-contract
+mkdir -p deploy/infos
+mkdir -p migrations/stake
+```
 
 ```
 ckb-cli deploy gen-txs --deployment-config ./deploy/stake.toml --migration-dir ./migrations/stake --from-address ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/stake.json --sign-now

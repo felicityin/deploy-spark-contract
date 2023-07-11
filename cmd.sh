@@ -9,7 +9,7 @@ version=0
 
 contracts=(
     "xudt" "omni" "selection" "checkpoint" "metadata" "stake" "stake-smt"
-    "delegate" "delegate-smt" "requirement" "withdraw" "reward"
+    "delegate" "delegate-smt" "requirement" "withdraw" "reward" "always-success"
 )
 
 funcs=("gen" "sign" "apply")
