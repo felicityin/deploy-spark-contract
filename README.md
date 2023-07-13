@@ -86,7 +86,7 @@ ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt
 ckb-cli deploy apply-txs --info-file ./deploy/infos/stake.json --migration-dir ./migrations/stake
 ```
 
-Or use bash as follow.
+Or use bash as follows.
 
 ```
 bash cmd.sh -c stake -f g
@@ -108,7 +108,7 @@ ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt
 ckb-cli deploy apply-txs --info-file ./deploy/infos/stake1.json --migration-dir ./migrations/stake
 ```
 
-Or use bash as follow.
+Or use bash as follows.
 
 ```
 bash cmd.sh -c stake -f g -v 1
