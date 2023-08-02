@@ -2,6 +2,7 @@
 
 mkdir -p deploy/infos
 mkdir -p migrations/always-success
+mkdir -p migrations/checkpoint
 mkdir -p migrations/delegate
 mkdir -p migrations/delegate-smt
 mkdir -p migrations/metadata
