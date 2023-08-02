@@ -78,6 +78,11 @@ mkdir -p deploy/infos
 mkdir -p migrations/stake
 ```
 
+or just run bash:
+```
+bash create-migrations.sh
+```
+
 ```
 ckb-cli deploy gen-txs --deployment-config ./deploy/stake.toml --migration-dir ./migrations/stake --from-address ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/stake.json --sign-now
 
@@ -86,7 +91,7 @@ ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt
 ckb-cli deploy apply-txs --info-file ./deploy/infos/stake.json --migration-dir ./migrations/stake
 ```
 
-Or use bash as follow.
+Or use bash as follows.
 
 ```
 bash cmd.sh -c stake -f g
@@ -108,7 +113,7 @@ ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt
 ckb-cli deploy apply-txs --info-file ./deploy/infos/stake1.json --migration-dir ./migrations/stake
 ```
 
-Or use bash as follow.
+Or use bash as follows.
 
 ```
 bash cmd.sh -c stake -f g -v 1
