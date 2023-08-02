@@ -2,9 +2,9 @@
 
 Reference: [Run a CKB Dev Blockchain](https://docs.nervos.org/docs/basics/guides/devchain)
 
-1. Download the Latest [CKB Binary](https://github.com/nervosnetwork/ckb/releases).
+1. Download the Latest [CKB Binary](https://github.com/nervosnetwork/ckb/releases/tag/v0.111.0-rc8).
 
-2. Import your account into [ckb-cli](https://github.com/nervosnetwork/ckb-cli).
+2. Import your account into ckb-cli.
 
    ```
    echo 33b08bb054d5dd04013156dced8ba2ce4d8cc5973e10d905a228ea1abc267e60 >> privkey
