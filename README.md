@@ -34,6 +34,8 @@ git clone https://github.com/axonweb3/axon-contract
 cd axon-contract
 
 capsule build --release
+
+cp axon-contract/build/release/* deploy-spark-contract/bin/
 ```
 
 Other contracts.
@@ -49,8 +51,6 @@ cp ckb-production-scripts/build/xudt_rce deploy-spark-contract/bin/
 cp ckb-production-scripts/build/always_success deploy-spark-contract/bin/
 ```
 
-Then copy compiled contracts from `axon-contract/build/release` to `./bin`.
-
 # Switch network
 
 ```
@@ -61,7 +61,6 @@ config --url http://127.0.0.1:8114
 # Deploy Contracts
 
 Reference: [How to use ckb-cli to deploy a contract](https://github.com/nervosnetwork/ckb-cli/wiki/Deploy-contracts#generate-the-update-transaction)
-
 
 Create migration directories.
 ```
