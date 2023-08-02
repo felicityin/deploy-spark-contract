@@ -33,15 +33,7 @@ Compile axon contracts.
 git clone https://github.com/axonweb3/axon-contract
 cd axon-contract
 
-capsule build -n checkpoint --release
-capsule build -n metadata --release
-capsule build -n stake --release
-capsule build -n stake-smt --release
-capsule build -n delegate --release
-capsule build -n delegate-smt --release
-capsule build -n requirement --release
-capsule build -n withdraw --release
-capsule build -n reward --release
+capsule build --release
 ```
 
 Other contracts.
@@ -70,28 +62,13 @@ config --url http://127.0.0.1:8114
 
 Reference: [How to use ckb-cli to deploy a contract](https://github.com/nervosnetwork/ckb-cli/wiki/Deploy-contracts#generate-the-update-transaction)
 
-Taking deploying contract `stake` as an example.
 
-```
-cd deploy-spark-contract
-mkdir -p deploy/infos
-mkdir -p migrations/stake
-```
-
-or just run bash:
+Create migration directories.
 ```
 bash create-migrations.sh
 ```
 
-```
-ckb-cli deploy gen-txs --deployment-config ./deploy/stake.toml --migration-dir ./migrations/stake --from-address ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/stake.json --sign-now
-
-ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/stake.json --add-signatures
-
-ckb-cli deploy apply-txs --info-file ./deploy/infos/stake.json --migration-dir ./migrations/stake
-```
-
-Or use bash as follows.
+Taking deploying contract `stake` as an example.
 
 ```
 bash cmd.sh -c stake -f g
@@ -104,16 +81,6 @@ bash cmd.sh -c stake -f a
 # Upgrade Contracts
 
 Taking upgrading contract `stake` as an example.
-
-```
-ckb-cli deploy gen-txs --deployment-config ./deploy/stake.toml --migration-dir ./migrations/stake --from-address ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/stake1.json --sign-now
-
-ckb-cli deploy sign-txs --from-account ckt1qzda0cr08m85hc8jlnfp3zer7xulejywt49kt2rr0vthywaa50xwsqdwcq424yk63qsagvnspjmtuukh4zt3j9cdgn4kv --info-file ./deploy/infos/stake1.json --add-signatures
-
-ckb-cli deploy apply-txs --info-file ./deploy/infos/stake1.json --migration-dir ./migrations/stake
-```
-
-Or use bash as follows.
 
 ```
 bash cmd.sh -c stake -f g -v 1
