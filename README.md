@@ -38,7 +38,7 @@ capsule build --release
 cp axon-contract/build/release/* deploy-spark-contract/bin/
 ```
 
-Other contracts.
+Compile other contracts.
 
 ```
 git clone https://github.com/nervosnetwork/ckb-production-scripts
